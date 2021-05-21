@@ -10,7 +10,7 @@ var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obsta
 
 var score;
 var gameOverImg,restartImg
-var life3, life2, life
+var life3, life2, life1
 var jumpSound , checkPointSound, dieSound
 
 function preload(){
@@ -30,8 +30,9 @@ function preload(){
   
   restartImg = loadImage("restart.png")
   gameOverImg = loadImage("gameOver.png")
-  life = loadImage("")
-  
+  life1 = loadImage("life1.jpg")
+  life2 = loadImage("life2.jpg")
+  life3 = loadImage("life3.jpg")
   jumpSound = loadSound("jump.mp3")
   dieSound = loadSound("die.mp3")
   checkPointSound = loadSound("checkPoint.mp3")
@@ -90,6 +91,9 @@ function draw() {
 
     gameOver.visible = false;
     restart.visible = false;
+    life1.visible = true;
+    life2.visible = true;
+    life3.visible = true;
     
     ground.velocityX = -(4 + 3* score/100)
     //scoring
